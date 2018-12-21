@@ -29,7 +29,7 @@ Additional command are available for debugging, use the `help` command to see th
 If you would like to run the generator in docker to generate your `snmp.yml` config run the following commands.
 
 ```sh
-docker build -t snmp-generator .
+docker build -t snmp-generator -f Dockerfile ..
 docker run -ti \
   -v $HOME/.snmp/mibs:/root/.snmp/mibs \
   -v $PWD/generator.yml:/opt/generator.yml:ro \
